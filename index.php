@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Portal</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/estilos.css">
-</head>
-<body>
+<?php require 'inc/cabecera.inc'; ?>
     
     <div class="container-fluid">
         <div class="row"> 
@@ -17,7 +9,7 @@
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 caja col-centrar">
               
                 
-                <form action="" method="POST" role="form">
+                <form action="admin.php" method="POST" role="form">
                     <legend>Logeate</legend>
                 
                     <div class="form-group">
@@ -28,6 +20,7 @@
                     </div>
                 
                     <button type="submit" class="btn btn-primary">Ingresar</button>
+                    <a class="pull-right" href="registrar.php">Registrar</a>
                 </form>
                 
                 
@@ -36,10 +29,7 @@
         
     </div>
     
-    
-</body>
-</html>
-
+    <?php require 'inc/footer.inc'; ?>
 
 
 
