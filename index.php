@@ -20,7 +20,7 @@
                     </div>
                 
                     <button type="submit" class="btn btn-primary">Ingresar</button>
-                    <a class="pull-right" href="registrar.php">Registrar</a>
+                    <a class="pull-right" href="registrarse.php">Registrar</a>
                 </form>
                 
                 
