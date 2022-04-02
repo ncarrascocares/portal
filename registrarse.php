@@ -7,8 +7,28 @@
             </div>
             
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 caja col-centrar">
-              
+
+                <?php 
+
+                    if ($_POST) {
+
+                        //Convirtiendo array en variables
+                        extract($_POST, EXTR_OVERWRITE);
+
+                        //condicional para crear carpeta en caso de no existir
+                        if (!file_exists("fotos")) {
+                            mkdir("fotos", 0777);
+                        }
+
+                        $nombre = strtolower($nombre);
+
+                        if(validarFoto($nombre)){
+                            echo "<img src='$rutaSubida' alt=''>";
+                        }
+                    
+                    }
                 
+                ?>
                 <form action="" enctype="multipart/form-data" method="POST" role="form">
                     <legend>Registrarse</legend>
                 
@@ -47,7 +67,7 @@
                     </div>
                     <div class="form-group">
                         <label for="">Selecciona tu foto de perfil</label>
-                        <input name="codigopostak" type="file" class="form-control" id="" placeholder="Codigo postal">
+                        <input name="foto" type="file" class="form-control" id="">
                     </div>
                     <button type="submit" class="btn btn-primary">Registrarse</button>
                     <a class="pull-right" href="index.php">Ya tengo cuenta!</a>

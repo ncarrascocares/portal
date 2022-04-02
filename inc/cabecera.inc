@@ -1,3 +1,8 @@
+<?php       
+    require 'lib/errores.php';
+    require 'lib/validarFoto.php';
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
